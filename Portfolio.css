@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+background: #080808;
+color: #fff;
+
+}
+#header{
+width: 100%;
+height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container{
+padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav ul li{
+display: inline-block;
+list-style: none;
+margin: 10px 20px;
+}
+nav ul li a{
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+position: relative;
+}
+nav ul li a::after{
+content: '';
+width: 0;
+height: 3px;
+background: #ff004f;
+position: absolute;
+left: 0;
+bottom: -6px;
+transition: 0.5s;
+}
+nav ul li a:hover::after{
+width: 100%;
+}
+.header-text{
+margin-top: 20%;
+font-size: 30px;
+}
+.header-text {
+    margin-top: 5%; /* Reduce the margin */
+}
+
+nav {
+    margin-bottom: 10px; /* Reduce the gap below the logo */
+}
+
+.header-text h1 span{
+color: #ff004f;
+}
+.header-text {
+    position: relative;
+    display: flex;
+    align-items: center; /* Align text and image */
+    gap: 20px; /* Add space between text and image */
+}
+
+.image {
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*-------------------- About Section --------------------*/
+#About {
+    padding: 60px 0; /* Adjusted padding */
+    color: #ababab;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+.row {
+    display: flex; /* Enables Flexbox, allowing  elements to be arranged in a row by default. */
+    justify-content: space-between; /* Distributes elements evenly with maximum space between them. */
+    flex-wrap: wrap; /* Ensures that items wrap onto the next line if there isn’t enough space in one row. */
+}
+
+/* Left column for image */
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;/* Makes the corners rounded with a 15px radius */
+}
+
+/* Right column for text */
+.about-col-2 {
+    flex-basis: 60%;  /* Sets the initial size of this column to 60% of the parent container */
+}
+
+
+/* Section title styling */
+.sub-title {
+    font-size: 30px; /* Reduced font size */
+    font-weight: 500;
+    color: #fff;
+}
+
+/* About text */
+.about-text {
+    font-size: 14px; /* Reduced font size */
+}
+
+/* Styling for tab titles */
+.tab-titles {
+    display: flex;
+    margin: 15px 0 30px;
+}
+
+/* Tab links */
+.tab-links {
+    margin-right: 40px;
+    font-size: 16px; /* Smaller font size */
+    font-weight: 500;
+    cursor: pointer;/* Changes cursor to a hand when hovered over */
+    position: relative;
+    color: #e6004c;
+}
+
+/* Underline effect */
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+/* Tab content */
+.tab-contents ul li {
+    list-style: none;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Highlighted text */
+.tab-contents ul li span {
+    color: #b547b5;
+    font-size: 15px;
+}
+
+/* Hide tabs by default */
+.tab-contents {
+    display: none;
+}
+
+/* Display active tab */
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Adding color to "A" in "About" and "M" in "Me" */
+.about-a {
+    color: #ff004f; /* Red color for "A" */
+}
+
+.me-m {
+    color: #ff004f; /* Red color for "M" */
+}
+
+/*----------------------- Services Section -------------------*/
+#services {
+    padding: 30px 0;
+}
+
+
+/* Services title styling */
+.services-title {
+    font-size: 30px; /* Smaller font size */
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* Services list */
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Services card */
+.services-list div {
+    background: #262626;
+    padding: 30px;
+    font-size: 13px; /* Smaller font */
+    font-weight: 300;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* Hover effect */
+.services-list div:hover {
+    transform: translateY(-5px);
+}
+
+/* Service headings */
+.services-list h2 {
+    color: #fff;
+    font-size: 22px; /* Smaller font */
+    margin-bottom: 10px;
+}
+
+/* Service descriptions */
+.services-list p {
+    font-size: 14px; /* Smaller font */
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Service buttons */
+.services-list a {
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+    padding: 6px 12px; /* Slightly smaller button */
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* Button hover effect */
+.services-list a:hover {
+    background: #e6004c;
+}
+
+#services .container .services-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+.me-m {
+    color: #ff004f ;
+}
+.services-s {
+    color: #ff004f ;
+}
+
+/*------------Portfolio-------------------*/
+#portfolio{
+    padding: 50px 0;
+
+}
+/* Style for colored and bold "M" and "W" in "My Work" */
+
+.portfolio-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Make "M" in "My" and "W" in "Work" bold and colored */
+.portfolio-title .my-m,
+.portfolio-title .work-w {
+    color: #ff004f;  /* Red color */
+    font-weight: bold; /* Bold */
+}
+
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer {
+    
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 0.5s ease-in-out;
+    }
+    
+.layer h3{
+font-weight: 500;
+margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+/*----------------contact-------------*/
+.contact-title {
+    font-size: 40px; /* Smaller font size */
+    font-weight: bold;
+  }
+  
+  .contact-c {
+    color: #ff004f; /* Color for "C" */
+  }
+  
+  .me-m {
+    color: #ff004f; /* Color for "M" */
+  }
+  
+.contact-left{
+flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+    
+    }
+.contact-left p{
+    margin-top: 30px;
+    }
+.contact-left p i{
+color: #ff004f;
+margin-right: 15px;
+font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+width: 100%;
+}
+form input, form textarea{
+width: 100%;
+border: 0;
+outline: none;
+background: #262626;
+padding: 15px;
+margin: 15px 0;
+color: #fff;
+font-size: 18px;
+border-radius: 6px;
+
+}
+/* Basic styling for the button */
+.button.contact-button {
+    background-color: #3498db; /* Blue background */
+    color: #fff; /* White text */
+    font-size: 16px; /* Text size */
+    padding: 15px 30px; /* Padding for size */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Show cursor pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    text-transform: uppercase; /* Uppercase letters */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 1px; /* Space between letters */
+}
+
+/* Button hover effect */
+.button.contact-button {
+    background-color: #ff004f; /* Default button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Optional: rounded corners */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.button.contact-button:hover {
+    background-color: #e6003c; /* Darker color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+/* Focus state for accessibility */
+.button.contact-button:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid #ff004f; /* Blue border */
+}
+
+/* Disabled button (when the form is not filled out yet) */
+.button.contact-button:disabled {
+    background-color: #ff004f; /* Light grey background */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    opacity: 0.7; /* Semi-transparent */
+}
+
+
+form btn2{
+    padding:  14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #1e1e1e; /* Slightly darker background for better contrast */
+    font-weight: 400;
+    margin-top: 30px;
+    color: #fff; /* Ensuring text is visible */
+    font-size: 14px;
+    letter-spacing: 1px; /* Slightly spaced-out text for better readability */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.copyright i {
+    color: #ff004f;
+    margin: 0 5px; /* Adds spacing around the icon */
+    font-size: 18px; /* Increases icon size slightly */
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.copyright i:hover {
+    color: #ff3366; /* Slightly lighter red on hover */
+}
